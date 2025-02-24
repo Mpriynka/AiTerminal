@@ -1,0 +1,17 @@
+# Ignore virtual environment
+aivenv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore system files (Mac/Linux)
+.DS_Store
+*.swp
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
