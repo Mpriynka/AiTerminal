@@ -1,56 +1,52 @@
-# ✨ Gemini AI Vim Plugin
+# Gemini AI Vim Plugin
 
-A Vim plugin powered by Gemini AI that helps you:
-- **Generate code** based on prompts.
-- **Debug selected code** to identify errors.
-- **Suggest better alternatives** for code improvements.
+A Vim plugin that integrates Google Gemini AI for code generation, debugging, and suggestions.
 
-## 📌 Features
-- `:GenCode` → Generate code from a text prompt.
-- `:DebugCode` → Debug selected code.
-- `:SuggestCode` → Suggest improvements for selected code.
+## Features
+- **Code Generation**: Generate code snippets based on natural language prompts.
+- **Code Debugging**: Detect and fix issues in selected code blocks.
+- **Code Suggestions**: Receive best practices and improvements for your code.
 
-## 🚀 Installation
+## Installation
 
-### **1️⃣ Clone the Repository**
-```bash
-git clone https://github.com/yourusername/AiTerminal.git
-cd AiTerminal
+### Using Vim Plug
+Add the following line to your `~/.vimrc`:
+
+```vim
+Plug 'your-username/gemini-vim'
 ```
 
-### **2️⃣ Run the Install Script**
-```bash
-bash install.sh
-```
-This will:
-- Install dependencies.
-- Copy the Vim plugin to `~/.vim/plugin/`.
-- Set up the required API key.
-
-### **3️⃣ Set Up Your API Key**
-Create an environment variable for the Gemini AI API key:
-```bash
-export GEMINI_API_KEY="your_api_key_here"
-```
-To make this persistent, add it to your `~/.bashrc` or `~/.zshrc`:
-```bash
-echo 'export GEMINI_API_KEY="your_api_key_here"' >> ~/.bashrc
-source ~/.bashrc
+Then restart Vim and run:
+```vim
+:PlugInstall
 ```
 
-## 🛠️ Usage
-After installation, restart Vim and use the following commands:
+### Manual Installation
+Clone the repository into your Vim configuration directory:
 
-- **Generate Code** → `:GenCode` → Enter a prompt, and AI generates code.
-- **Debug Code** → `:DebugCode` → Debugs the currently selected code.
-- **Suggest Improvements** → `:SuggestCode` → Suggests better alternatives.
+```sh
+git clone https://github.com/your-username/gemini-vim.git ~/.vim/pack/plugins/start/gemini-vim
+```
 
-## 📁 Project Structure
+## Setup
+Set your Gemini API key as an environment variable:
+
+```sh
+export GEMINI_API_KEY='your-api-key-here'
 ```
-AiTerminal/
-│── install.sh            # Installation script
-│── plugin/               # Contains the Vim plugin
-│   ├── gemini_plugin.py  # The main Vim plugin logic
-│── README.md             # Documentation
-│── test.py               # (Optional) Test cases
-```
+
+You can add this line to your `.bashrc` or `.zshrc` to make it persistent.
+
+## Usage
+
+### Commands
+- `:GemiGenerate` - Prompts for input and generates relevant code.
+- `:GemiDebug` - Debugs selected lines of code.
+- `:GemiSuggest` - Suggests improvements for selected code.
+
+### Example Usage
+1. Open a Vim buffer and type a code snippet.
+2. Select the lines to debug or improve using `V` (visual mode).
+3. Run `:GemiDebug` or `:GemiSuggest`.
+4. The response will open in a new buffer.
+
