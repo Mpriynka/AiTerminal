@@ -1,68 +1,89 @@
-Here’s the full README.md code with proper formatting:
+# 📖 Gemini AI Vim Plugin 
 
-# 📖 Gemini AI Vim Plugin  
-
-A **powerful Vim plugin** that integrates **Google Gemini AI** to assist with **code generation, debugging, and suggestions**. 🚀  
+A **powerful Vim plugin** that integrates **Google Gemini AI** to assist with **code generation, debugging, and suggestions**. 🚀 
 
 ---
 
 ## ✨ Features
-✅ **Code Generation** – Generate code snippets from natural language prompts.  
-✅ **Code Debugging** – Detect and fix issues in selected code blocks.  
-✅ **Code Suggestions** – Get best practices and improvements for your code.  
+
+* ✅ **Code Generation** – Generate code snippets from natural language prompts.
+* ✅ **Code Debugging** – Detect and fix issues in selected code blocks.
+* ✅ **Code Suggestions** – Get best practices and improvements for your code.
 
 ---
 
 ## 📥 Installation
-Clone the repository:  
-```sh
-git clone https://github.com/Mpriynka/AiTerminal.git
-cd AiTerminal
 
-⚙️ Setup
+1.  Clone the repository:
 
-The setup.sh script will move plugin files, set up a virtual environment, and install dependencies automatically.
+    ```sh
+    git clone [https://github.com/Mpriynka/AiTerminal.git](https://github.com/Mpriynka/AiTerminal.git)
+    cd AiTerminal
+    ```
 
-chmod +x setup.sh  
-./setup.sh  
+### ⚙️ Setup
 
-🔹 After installation, set up your API key:
+1.  Make the setup script executable and run it:
 
-export GEMINI_API_KEY='your-api-key-here'
+    ```sh
+    chmod +x setup.sh
+    ./setup.sh
+    ```
 
-🔹 Activate the virtual environment manually if needed:
+2.  Set up your API key:
 
-source ~/.vim/gemini_vim_env/bin/activate
+    ```sh
+    export GEMINI_API_KEY='your-api-key-here'
+    ```
 
-🔹 To make the API key persistent, add this line to your .bashrc or .zshrc:
+3.  (Optional) Activate the virtual environment manually if needed:
 
-echo "export GEMINI_API_KEY='your-api-key-here'" >> ~/.bashrc
-source ~/.bashrc
+    ```sh
+    source ~/.vim/gemini_vim_env/bin/activate
+    ```
 
-(Replace .bashrc with .zshrc if using Zsh.)
-🛠 Usage
-📌 Available Commands
-Command	Description
-:GemiGenerate	Prompts for input and generates relevant code.
-:GemiDebug	Debugs selected lines of code.
-:GemiSuggest	Suggests improvements for selected code.
-📌 Example Usage
+4.  (Optional) To make the API key persistent, add the following line to your `~/.bashrc` or `~/.zshrc` file:
 
-1️⃣ Open a Vim buffer and write some code.
-2️⃣ Select lines to debug or improve using Visual mode (V).
-3️⃣ Run :GemiDebug or :GemiSuggest.
-4️⃣ The AI response will appear in a new buffer.
-💡 Troubleshooting
+    ```sh
+    echo "export GEMINI_API_KEY='your-api-key-here'" >> ~/.bashrc
+    source ~/.bashrc
+    ```
 
-🔹 Vim says "command not found"
-➡ Ensure Vim detects the plugin:
+    (Replace `.bashrc` with `.zshrc` if you are using Zsh.)
 
-:scriptnames
+## 🛠 Usage
 
-Look for gemini.vim in the list. If missing, restart Vim or re-run the setup script.
+### 📌 Available Commands
 
-🔹 Plugin not working?
-➡ Ensure your virtual environment is activated:
+| Command        | Description                                  |
+| -------------- | -------------------------------------------- |
+| `:GemiGenerate` | Prompts for input and generates relevant code. |
+| `:GemiDebug`    | Debugs selected lines of code.              |
+| `:GemiSuggest`  | Suggests improvements for selected code.       |
 
-source ~/.vim/gemini_vim_env/bin/activate
+### 📌 Example Usage
 
+1.  Open a Vim buffer and write some code.
+2.  Select lines to debug or improve using Visual mode (`V`).
+3.  Run `:GemiDebug` or `:GemiSuggest`.
+4.  The AI response will appear in a new buffer.
+
+## 💡 Troubleshooting
+
+### 🔹 Vim says "command not found"
+
+* ➡ Ensure Vim detects the plugin:
+
+    ```vim
+    :scriptnames
+    ```
+
+    Look for `gemini.vim` in the list. If it is missing, restart Vim or re-run the setup script.
+
+### 🔹 Plugin not working?
+
+* ➡ Ensure your virtual environment is activated:
+
+    ```sh
+    source ~/.vim/gemini_vim_env/bin/activate
+    ```
