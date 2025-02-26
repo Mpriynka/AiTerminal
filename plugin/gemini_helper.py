@@ -16,9 +16,9 @@ def main():
     genai.configure(api_key=api_key)
 
     prompts = {
-        "generate": f"Generate code for this request:\n{code}",
-        "debug": f"Debug and provide the corrected version of this code:\n{code}", 
-        "suggest": f"Suggest improvements for this code:\n{code}" 
+        "generate": f"Generate code only (no explanation) for this request. If the request is not related to programming, respond with 'Invalid request: Please provide a programming-related prompt.':\n{code}",
+        "debug": f"Debug and provide the corrected version of this code and if required, short explanation. If the input is not code, respond with 'Invalid request: Please provide a code snippet to debug.':\n{code}", 
+        "suggest": f"Suggest improvements for this code only (no explanation). If the input is not code, respond with 'Invalid request: Please provide a code snippet to improve.':\n{code}" 
     }
 
     # Validate the selected mode.
