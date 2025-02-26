@@ -28,11 +28,11 @@ source ~/.vim/gemini_vim_env/bin/activate
 echo "Installing dependencies..."
 pip install google-generativeai
 
-# Prompt user to set up the API key
-echo "Please set your Gemini API key:"
-echo "export GEMINI_API_KEY='your_api_key_here'" >> ~/.bashrc
-echo "export GEMINI_API_KEY='your_api_key_here'" >> ~/.zshrc
-echo "Run 'source ~/.bashrc' or 'source ~/.zshrc' to apply changes."
-
-echo "Setup complete! You can now use Gemini commands inside Vim."
-
+echo "🔹 Setup Complete! Follow these steps to finalize the setup:"
+echo "1. Set your Gemini API key as an environment variable:"
+echo "   export GEMINI_API_KEY='your_api_key_here'"
+echo ""
+echo "2. To activate the virtual environment in future Vim sessions, run:"
+echo "   source ~/.vim/gemini_vim_env/bin/activate"
+echo ""
+echo "🎉 You can now use the Gemini Vim Plugin!"

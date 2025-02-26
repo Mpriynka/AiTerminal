@@ -1,52 +1,68 @@
-# Gemini AI Vim Plugin
+Here’s the full README.md code with proper formatting:
 
-A Vim plugin that integrates Google Gemini AI for code generation, debugging, and suggestions.
+# 📖 Gemini AI Vim Plugin  
 
-## Features
-- **Code Generation**: Generate code snippets based on natural language prompts.
-- **Code Debugging**: Detect and fix issues in selected code blocks.
-- **Code Suggestions**: Receive best practices and improvements for your code.
+A **powerful Vim plugin** that integrates **Google Gemini AI** to assist with **code generation, debugging, and suggestions**. 🚀  
 
-## Installation
+---
 
-### Using Vim Plug
-Add the following line to your `~/.vimrc`:
+## ✨ Features
+✅ **Code Generation** – Generate code snippets from natural language prompts.  
+✅ **Code Debugging** – Detect and fix issues in selected code blocks.  
+✅ **Code Suggestions** – Get best practices and improvements for your code.  
 
-```vim
-Plug 'your-username/gemini-vim'
-```
+---
 
-Then restart Vim and run:
-```vim
-:PlugInstall
-```
-
-### Manual Installation
-Clone the repository into your Vim configuration directory:
-
+## 📥 Installation
+Clone the repository:  
 ```sh
-git clone https://github.com/your-username/gemini-vim.git ~/.vim/pack/plugins/start/gemini-vim
-```
+git clone https://github.com/Mpriynka/AiTerminal.git
+cd AiTerminal
 
-## Setup
-Set your Gemini API key as an environment variable:
+⚙️ Setup
 
-```sh
+The setup.sh script will move plugin files, set up a virtual environment, and install dependencies automatically.
+
+chmod +x setup.sh  
+./setup.sh  
+
+🔹 After installation, set up your API key:
+
 export GEMINI_API_KEY='your-api-key-here'
-```
 
-You can add this line to your `.bashrc` or `.zshrc` to make it persistent.
+🔹 Activate the virtual environment manually if needed:
 
-## Usage
+source ~/.vim/gemini_vim_env/bin/activate
 
-### Commands
-- `:GemiGenerate` - Prompts for input and generates relevant code.
-- `:GemiDebug` - Debugs selected lines of code.
-- `:GemiSuggest` - Suggests improvements for selected code.
+🔹 To make the API key persistent, add this line to your .bashrc or .zshrc:
 
-### Example Usage
-1. Open a Vim buffer and type a code snippet.
-2. Select the lines to debug or improve using `V` (visual mode).
-3. Run `:GemiDebug` or `:GemiSuggest`.
-4. The response will open in a new buffer.
+echo "export GEMINI_API_KEY='your-api-key-here'" >> ~/.bashrc
+source ~/.bashrc
+
+(Replace .bashrc with .zshrc if using Zsh.)
+🛠 Usage
+📌 Available Commands
+Command	Description
+:GemiGenerate	Prompts for input and generates relevant code.
+:GemiDebug	Debugs selected lines of code.
+:GemiSuggest	Suggests improvements for selected code.
+📌 Example Usage
+
+1️⃣ Open a Vim buffer and write some code.
+2️⃣ Select lines to debug or improve using Visual mode (V).
+3️⃣ Run :GemiDebug or :GemiSuggest.
+4️⃣ The AI response will appear in a new buffer.
+💡 Troubleshooting
+
+🔹 Vim says "command not found"
+➡ Ensure Vim detects the plugin:
+
+:scriptnames
+
+Look for gemini.vim in the list. If missing, restart Vim or re-run the setup script.
+
+🔹 Plugin not working?
+➡ Ensure your virtual environment is activated:
+
+source ~/.vim/gemini_vim_env/bin/activate
 
